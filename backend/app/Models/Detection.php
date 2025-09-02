@@ -1,0 +1,16 @@
+<?php
+namespace App\Models;
+
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+
+class Detection extends Model
+{
+use HasFactory;
+protected $fillable = ['source','image_path','results'];
+protected $casts = [
+'results' => 'array',
+];
+}
